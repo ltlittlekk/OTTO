@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title>演示</title>
+    <body>
+        <audio id="yanshi" src="waao.mp3" autoplay="autoplay">浏览器不支持</audio>
+        <a>需要交互</a>
+        <script type="text/javascript">
+            function toggleSound() {
+                var music = document.getElementById("yanshi");
+                console.log(music);
+                console.log(music.paused);
+                if (music.paused) {
+                    music.paused = false;
+                    music.play();
+                }
+            }
+            
+            setInterval("toggleSound()", 1)
+        </script>
+    </body>
+</head>
